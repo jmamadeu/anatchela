@@ -15,16 +15,18 @@ const Input: React.FC<InputProps> = ({
 }) => {
   return (
     <>
-      <label className='text-base text-texts-secondary font-title font-medium'>
-        {label || ''}
-      </label>
+      <div className='flex flex-col'>
+        <label className='text-base text-texts-secondary font-title font-medium'>
+          {label || ''}
+        </label>
 
-      <input
-        name={name}
-        {...rest}
-        className={`${className} mt-4 bg-shapes-box border border-shapes-corner
+        <input
+          name={name}
+          {...rest}
+          className={`${className} mt-4 bg-shapes-box border border-shapes-corner
  outline-none rounded-md h-14 font-medium pl-6 w-80 font-title text-base text-texts-secondary placeholder-texts-complement`}
-      />
+        />
+      </div>
     </>
   );
 };
