@@ -13,6 +13,7 @@ module.exports = {
           default: '#41414c',
           main: '#f1972c',
           mainLight: '#FA9C2D',
+          blue: "#665df5"
         },
 
         secondary: {
