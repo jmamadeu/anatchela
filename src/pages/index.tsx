@@ -2,13 +2,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import { FiFacebook, FiMail } from 'react-icons/fi';
+
 import { Input } from '../components';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Anatchela | Crie sua conta gratuitamente</title>
+        <title>Anatchela | Create your account for free</title>
         <link rel='icon' href='/favlogo.png' />
       </Head>
 
@@ -73,14 +75,30 @@ export default function Home() {
                 <br />
                 <br />
 
-                <button
-                  type='button'
-                  className='w-44 font-title h-14 bg-shapes-lines font-bold text-sm uppercase text-texts-secondary
-              hover:bg-shapes-complement rounded-md transition duration-150
+                <div className='flex flex-col md:flex-row items-center justify-between'>
+                  <button
+                    type='button'
+                    className='w-44 font-title h-14 bg-primary-blue font-bold text-sm uppercase text-white
+              hover:text-primary-blue hover:bg-shapes-corner rounded-md transition duration-150
               outline-none focus:outline-none'
-                >
-                  Sign up
-                </button>
+                  >
+                    Sign up
+                  </button>
+
+                  <span className='text-base text-texts-secondary font-title font-medium uppercase'>
+                    or
+                  </span>
+
+                  <div className='flex flex-row'>
+                    <button className='mr-4 border p-3 rounded-lg'>
+                      <FiFacebook className='text-primary-blue' size={24} />
+                    </button>
+
+                    <button className='border p-3 rounded-lg'>
+                      <FiMail className='text-primary-blue' size={24} />
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
